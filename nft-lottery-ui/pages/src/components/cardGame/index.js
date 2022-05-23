@@ -35,7 +35,7 @@ const CardGame = ({myLoader}) => {
         <div className="container">
             <h3 className="text-white  display-5 fw-normal text-center m-4">High Card Win</h3>
         </div>
-        <div className="container">
+        <div className="container" style={{backgroundColor:'#1F1C5C'}}>
             <div className="section">
                   <div className="section text-center p-3">
             <button className="btn fs-3 text-secondary btn-xl btn-light" onClick={() => setShow(!show)}>Try your luck</button>
@@ -47,7 +47,7 @@ const CardGame = ({myLoader}) => {
             </button>
         </div>
             </div>
-            <div className="col-lg-8 m-auto">
+            <div className="col-lg-8 m-auto" >
         <div className="container d-flex justify-content-center flex-lg-row flex-column">
 
             <div className="section d-flex p-5 justify-content-center align-items-center">

@@ -27,6 +27,7 @@ const myLoader = ({ src,width,quality }) => {
   </Carousel.Item>
   <Carousel.Item interval={500}>
   <Image
+  priority
   fill="white"
   alt="prize"
    className="d-block w-100"
@@ -40,7 +41,7 @@ const myLoader = ({ src,width,quality }) => {
   <Carousel.Item>
   <Image
     fill="white"
-
+    priority
    alt="prize"
    className="d-block w-100"
    layout="responsive"
@@ -52,6 +53,7 @@ const myLoader = ({ src,width,quality }) => {
   </Carousel.Item>
   <Carousel.Item>
   <Image
+   priority
    fill="white"
    alt="prize"
    className="d-block w-100"
@@ -64,7 +66,7 @@ const myLoader = ({ src,width,quality }) => {
   </Carousel.Item>
   <Carousel.Item>
   <Image
-   
+   priority
    alt="prize"
    className="d-block w-100"
    layout="responsive"

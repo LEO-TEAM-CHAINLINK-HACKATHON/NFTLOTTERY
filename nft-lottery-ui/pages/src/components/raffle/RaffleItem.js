@@ -1,11 +1,9 @@
 import Image from "next/image";
 import art1 from "../../../public/vectordesign (4).svg"
 import art2 from "../../../public/vectordesign (3).svg"
-
-const myLoader = ({ src }) => {
-    return `${src}`;
+const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
   };
-
 const RaffleItem = () => {
     return (
         <div className="section">

@@ -1,10 +1,26 @@
 import Image from "next/image";
+import { useWeb3Contract } from "react-moralis";
+import abi from "../../../../constants/abi.json"
 import moto from "../../../public/SLV4-01-Model-Preview-1050x650.png.svg";
+import EntryButton from "../entrenceButton";
 
-const myLoader = ({ src }) => {
-    return `${src}`;
+const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
   };
+
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
+
 const FeatBanner = () => { 
+
+    const {runContractFunction: enterRaffle} = useWeb3Contract({
+        abi: abi,
+        contractAddress:CONTRACT_ADDRESS,
+        functionName:"enterRaffle",
+        msgValue:"100000000000000000", //eth
+        params: {},
+    })
+    
+
     return (
         <div className="container bg-light">
         <div className="row p-4">
@@ -17,7 +33,8 @@ const FeatBanner = () => {
                 height={1000} 
                 layout="responsive" 
                 width={1200} 
-                loader={myLoader} 
+                loader={myLoader}
+                priority 
                 />
                 </div>
             </div>
@@ -31,9 +48,13 @@ const FeatBanner = () => {
 
                     <span className="badge badge-pill fs-5 m-2 badge-success text-dark">Tickets: 300
                     </span>
-                    <span className="badge badge-pill fs-5 m-2 badge-success text-dark">Price:tbc
-                    </span>
-                    <span className="badge badge-pill fs-5 m-2 bg-success badge-success text-dark">RafNFT price: 50%
+                    <EntryButton 
+                       onClick={ async () => {
+                        await enterRaffle()
+                        console.log("clicked")
+                    }}
+                     enterRaffle={enterRaffle} />
+                    <span className="badge badge-pill fs-5 m-2  badge-raffle text-dark">Raffle House price: 50%
                     </span>
                 </div>
             </div>

@@ -1,5 +1,4 @@
 
-
 .main {
   padding: 4rem 0;
   flex: 1 0 auto;
@@ -8,13 +7,13 @@
   flex-direction: column;
 } 
 
-.gDkHDj {
-    justify-content: center;
+// .gDkHDj {
+//     justify-content: center;
    
-}
-.sc-lbxAil {
-  margin-top: 2em !important;
-}
+// }
+// .sc-lbxAil {
+//   margin-top: 2em !important;
+// }
 
 .fa-rotate {
   transform: rotate(136deg);
@@ -31,11 +30,16 @@
 }
 
 .badge-success {
-  background-color: #00d4ff;
-  
+  background-color: #4B44E1;
+  border-color: #1F1C5C !important;
+
 }
 
-
+.badge-raffle {
+  color: white !important;
+  background-color: #00d5ff  !important;
+  border-color: #1F1C5C !important;
+}
 
 
 .footer {

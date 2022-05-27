@@ -11,13 +11,23 @@ const myLoader = ({ src, width, quality }) => {
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
 const FeatBanner = () => { 
-
+    // enter raffle 
     const {runContractFunction: enterRaffle} = useWeb3Contract({
         abi: abi,
         contractAddress:CONTRACT_ADDRESS,
         functionName:"enterRaffle",
         msgValue:"100000000000000000", //eth
         params: {},
+    })
+
+    // view functions
+
+    const {runContractFunction:getPlayers} = useWeb3Contract({
+        abi: abi,
+        contractAddress:CONTRACT_ADDRESS,
+        functionName:"s_recentWinner",
+        params:{},
+        
     })
     
 
@@ -53,6 +63,7 @@ const FeatBanner = () => {
                         await enterRaffle()
                         console.log("clicked")
                     }}
+                    getPlayers={getPlayers}
                      enterRaffle={enterRaffle} />
                     <span className="badge badge-pill fs-5 m-2  badge-raffle text-dark">Raffle House price: 50%
                     </span>

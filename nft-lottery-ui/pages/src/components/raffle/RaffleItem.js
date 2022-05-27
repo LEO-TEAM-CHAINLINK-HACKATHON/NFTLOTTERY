@@ -1,6 +1,6 @@
 import Image from "next/image";
-import art1 from "../../../public/vectordesign (4).svg"
-import art2 from "../../../public/vectordesign (3).svg"
+import art1 from "../../../../public/iamGood1.svg"
+import art2 from "../../../../public/stepper.svg"
 const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
@@ -15,6 +15,7 @@ const RaffleItem = () => {
                     <div className="col-12 col-md-6 col-lg-4">
                         <div className="card bg-transparent rounded-3 border-white mb-4">
                             <Image 
+                            priority
                             height={30}
                             width={30}
                             alt="item"
@@ -30,7 +31,9 @@ const RaffleItem = () => {
 
                     <div className="col-12 col-md-6 col-lg-4">
                         <div className="card bg-transparent rounded-3 border-white">
+                            <div className="container">
                             <Image 
+                            priority
                             height={30}
                             width={30}
                             alt="item"
@@ -38,6 +41,7 @@ const RaffleItem = () => {
                             layout="responsive"
                             loader={myLoader}
                             />
+                            </div>
                             <div className="card-body text-white text-center">
                                 <h5>Art Name</h5>
                             </div>

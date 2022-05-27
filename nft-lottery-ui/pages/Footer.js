@@ -1,5 +1,5 @@
 import Image from "next/image"
-import logo from "./public/vercel.svg"
+import logo from "../public/vercel.svg"
 const myLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`;
 };

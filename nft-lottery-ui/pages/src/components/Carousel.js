@@ -1,9 +1,10 @@
 import Image from "next/image"
-import bike from "../../public/SLV4-01-Model-Preview-1050x650.png.svg"
-import art1 from "../../public/image2vector.svg"
-import art2 from "../../public/image2vector (1).svg"
-import art3 from "../../public/image2vector (3).svg"
-import art4 from "../../public/vectordesign (4).svg"
+import bike from "../../public/ducati.svg"
+import art1 from "../../public/bequiet1.svg"
+import art2 from "../../public/bequiet2.svg"
+import art3 from "../../public/iamGood1.svg"
+import art4 from "../../public/iamGood2.svg"
+import art5 from "../../public/stepper.svg"
 import Carousel from "react-bootstrap/Carousel"
 const myLoader = ({ src,width,quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`};

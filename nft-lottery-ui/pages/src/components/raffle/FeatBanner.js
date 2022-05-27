@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useWeb3Contract } from "react-moralis";
 import abi from "../../../../constants/abi.json"
-import moto from "../../../public/SLV4-01-Model-Preview-1050x650.png.svg";
+import moto from "../../../../public/ducati.svg";
 import EntryButton from "../entrenceButton";
 
 const myLoader = ({ src, width, quality }) => {

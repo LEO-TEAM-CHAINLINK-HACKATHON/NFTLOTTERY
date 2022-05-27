@@ -1,10 +1,6 @@
 import Image from "next/image"
 import cardDeck from "../../../../helpers/cardDeck"
-<<<<<<< HEAD
-import  deckBack  from "../../../public/images/cards/deckBack.svg"
-=======
 import  deckBack  from "../../../../public/images/cards/deckBack.svg"
->>>>>>> 2451ae099300f79825e98e6adc3f57496862a773
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
